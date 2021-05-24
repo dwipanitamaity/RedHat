@@ -7,11 +7,11 @@ filepath = os.path.abspath(os.path.dirname(__file__))
 client_file = os.path.join(str(filepath), CLIENT_SECRET_FILE)
 
 ####################################################################
-# Description:
-# client_secret file is provided by the google drive api
-# which holds the necessary details of client, project,
-# token_uri,auth_uri in order to establish the service. This
-# is a basic test to verify the details present in the downloaded json
+# Description: 'client_secret file' is provided by the developed app
+#              from google drive which holds the necessary details of
+#              client, project, token_uri, auth_uri in order to establish
+#              the service with app.This is a basic test to verify the
+#              details present in the downloaded json
 # Author: Dwipanita Maity
 # Date : 23-05-2021
 ####################################################################
@@ -30,7 +30,7 @@ if __name__ == "__main__":
                 assert token_uri == 'https://oauth2.googleapis.com/token'
                 assert auth_uri == 'https://accounts.google.com/o/oauth2/auth'
 
-            print ("PASSED: Verified Client_Secret file holds necessary information to establish a service with app")
+            print ("PASSED: Verified Client_Secret file holds all necessary information to establish a service")
             assert True
 
         except Exception as e:

@@ -7,9 +7,10 @@ API_VERSION = 'v3'
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
 ############################################################################
-# Description: For downloading any file/image using google drive api
-# the app is expecting the respective file to be present in google drive storage
-# This is a basic validation to check the expected file to be present in cloud
+# Description: For downloading any file/image using google drive ap, the app
+#              is expecting the respective file to be present in google drive
+#              storage. This is a basic validation to check the expected file
+#              to be present in cloud.
 # #
 # Author: Dwipanita Maity
 # Date : 23-05-2021
@@ -23,6 +24,8 @@ service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
 page_token = None
 response = service.files().list(q="mimeType='image/jpeg'",  spaces='drive', fields='nextPageToken, files(id, name)', pageToken = page_token).execute()
 files = response.get('files')
+
+# Extracting all the files present in the provided in the cloud
 if files is not None:
     df = pd.DataFrame(files)
     df = df['name']

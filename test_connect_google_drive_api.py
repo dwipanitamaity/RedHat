@@ -3,8 +3,8 @@ import requests
 URL = "https://drive.google.com/drive"
 
 ############################################################################
-# Description: Establishing a successful connection with Google Drive API for
-# downloading the file/s
+# Description: Verifying a successful connection with Google Drive API for
+#              downloading the file/s
 # Author: Dwipanita Maity
 # Date : 23-05-2021
 # Reference : https://developers.google.com/drive/api
@@ -21,7 +21,7 @@ if __name__ == "__main__":
         print("PASSED: Successfully established a connection with Google Drive API")
 
     except Exception:
-        print("PASSED: Failed to connect withGoogle Drive API")
+        print("PASSED: Failed to connect with Google Drive API")
         assert False
 
     

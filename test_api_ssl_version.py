@@ -8,7 +8,7 @@ SCOPES = ['https://www.googleapis.com/auth/drive']
 API= 'https://www.googleapis.com/drive'
 
 ############################################################################
-# Description:
+# Description: SSL verification part in order to connect to api
 # Author: Dwipanita Maity
 # Date : 23-05-2021
 #############################################################################
@@ -30,7 +30,8 @@ for file_id in file_ids:
             print("PASSED: API end point does not require any SSL certification details")
 
     except Exception as e:
-        print("FAILED: SSL-certification has to ve taken care of by the developer")
+        print("FAILED: SSL-certification or ca-cert errors to be taken care of by the developer")
+        # The api end point url can be appended with ssl-verification part in order to avoid the issue
         assert False
 
 
