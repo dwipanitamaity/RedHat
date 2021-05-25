@@ -2,7 +2,7 @@
 RedHat
 
 # Description: 
-A small demo of downloading files using Google Drive API using Python
+A small demo of downloading files using Google Drive API in Python
 
 # Installation: 
 1. Install python 2.7 or onwards (Note: The project was developed with Pyhton 2.7 Interpreter)
